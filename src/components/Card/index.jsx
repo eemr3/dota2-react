@@ -11,6 +11,12 @@ class Card extends Component {
         <div className="dota__card-item">
           <img src={`${baseURL}${this.props.img}`} alt="Heroes" />
         </div>
+        <div className="dota__content-info">
+        <h2>{this.props.name}</h2>
+        <p>{this.props.primaryAttk}</p>
+        <p>{this.props.attackType}</p>
+        <p>{this.props.roles}</p>
+        </div>
       </section>
     );
   }
@@ -18,5 +24,8 @@ class Card extends Component {
 
 Card.propTypes = {
   img: PropsTypes.string.isRequired,
+  name: PropsTypes.string.isRequired,
+  primaryAttk: PropsTypes.string.isRequired,
+  attackType: PropsTypes.string.isRequired,
 };
 export default Card;
