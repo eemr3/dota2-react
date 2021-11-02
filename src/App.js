@@ -1,11 +1,11 @@
-
 import './App.css';
+import CardContainer from './components/CardContainer';
 
 function App() {
 
   return (
     <div className="App">
-     <h1>Dota 2</h1>
+     <CardContainer />
     </div>
   );
 }
