@@ -1,0 +1,12 @@
+.dota__footer {
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+  bottom: 0;
+  color: whitesmoke;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  padding: 10px;
+  
+  width: 100%;
+}
