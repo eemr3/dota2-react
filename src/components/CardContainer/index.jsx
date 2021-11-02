@@ -8,20 +8,27 @@ class CardContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [],
+      infoData: [],
     }
   }
 
   componentDidMount() {
     fetApiDota()
-      .then((data) => this.setState({ images: data }) )
+      .then((data) => this.setState({ infoData: data }) )
   }
   
   render() {
     return (
       <main className="dota__card">
-        {this.state.images.map((image) => (
-          <Card img={image.img} />
+        {this.state.infoData.map((data) => (
+          <Card 
+            key={data.id}
+            img={data.img} 
+            name={data.localized_name}
+            primaryAttk={data.primary_attr}
+            attackType={data.attack_type}
+            roles={data.roles.map((role, index)=> index < data.roles.length - 1 ? `${role} | `: role)}
+          />
         ))}
       </main>
     );
