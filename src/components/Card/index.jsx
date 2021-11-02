@@ -3,11 +3,9 @@ import PropsTypes from 'prop-types';
 
 class Card extends Component {
   render() {
-    const { img } = this.props.data;
+    const baseURL = 'https://api.opendota.com';
     return (
-      <div>
-        {img}
-      </div>
+      <img src={`${baseURL}${this.props.img}`} alt="Heroes"/>
     );
   }
 }
