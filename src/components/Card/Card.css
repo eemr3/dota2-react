@@ -1,0 +1,11 @@
+.dota__card-item img {
+  width: 100%;
+}
+
+.dota__content-card {
+  background-color: rgb(46, 41, 41);
+  border-radius: 8px;
+  height: 350px;
+  margin: 7px;
+  width: 300px;
+}
